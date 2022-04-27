@@ -18,8 +18,17 @@ class App extends Component{
     // .then(data => console.log(data))
     // .catch(error =>console.log(error.message));
 
-
+    //Post
+  //   axios.post('http://localhost:3001/dishes', {name: "Momo", price: "45"})
+  //  .then(response => console.log(response));
   
+  //Put
+  // axios.put('http://localhost:3001/dishes/0', {name: "Burger", price: "80"})
+  // .then(response => console.log(response));
+
+  //Delete
+  // axios.delete('http://localhost:3001/dishes/0')
+  // .then(response => console.log(response));
   
   }
 
