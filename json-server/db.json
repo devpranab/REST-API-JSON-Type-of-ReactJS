@@ -1,0 +1,56 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "price": "170"
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 2
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 3
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 4
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 5
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 6
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 7
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 8
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 9
+    },
+    {
+      "name": "Momo",
+      "price": "45",
+      "id": 10
+    }
+  ],
+  "comments": [],
+  "feebback": []
+}
