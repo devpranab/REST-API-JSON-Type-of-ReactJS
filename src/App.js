@@ -5,7 +5,12 @@ import axios from 'axios';
 
 
 class App extends Component{
+  state = {
+    dishes: null,
+    errMessage: null
+  }
   componentDidMount(){
+    console.log("componentDidMount:", this.state);
 
       //Get using cross-fetch
       // fetch('https://jsonplaceholder.typicode.com/posts')
@@ -18,6 +23,17 @@ class App extends Component{
     // .then(data => console.log(data))
     // .catch(error =>console.log(error.message));
 
+     //Get using axis, stored in state
+     axios.get('http://localhost:3001/dishes')
+    .then(response => response.data)
+    .then(data => { this.setState({ //after update
+      dishes: data
+
+    })})
+    .catch(error => {this.setState({
+      errMessage: error.message
+    })});
+
     //Post
   //   axios.post('http://localhost:3001/dishes', {name: "Momo", price: "45"})
   //  .then(response => console.log(response));
@@ -28,8 +44,17 @@ class App extends Component{
 
   //Delete
   // axios.delete('http://localhost:3001/dishes/0')
-  // .then(response => console.log(response));
+  // .then(response => console.log(response))
+  // .catch(error => {
+  //  this.setState({
+  // errMessage: error.message
+
+  //  })
+  //});
   
+  }
+  componentDidUpdate(){
+    console.log("componentDidUpdate:", this.state);
   }
 
   render(){
