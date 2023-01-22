@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Rest API & Json Type
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Client-Server Communication (HTTP)
+- URL: www.something.com(Uniform Resource Locator)
+- Browser(client/user)  - req/res message -  Server()
+- HTTP - Hyper Text Transfer Protocol
+ - https://www.something.com
+ - GET/index.html HTTP/1.1
+ - HTTP/1.1 200 OK
+- developer.mozilla.org/en-US/docs/Web/HTTP/Messages
+- developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+- developer.mozilla.org/en-US/docs/Web/HTTP/Status
+- websniffer.cc
 
-## Available Scripts
+2. REST API
+- Representational state transfer(REST)
+- Application1 - (communication) - Application2
+- API-Application Programming Interface
+- Rest Concept
+ - Resource(Nouns): 
+  - Any information provided by Rest API
+  - URI (Uniform Resource Indicator)
+  - URI Examples: http://www.something.com/books
+  - URI Examples: http://www.something.com/books/2
+ - Resource(Verbs):
+  - Actions to be performed on resources
+  - Perform CRUD operations
+  - HTTP POST => CREATE
+  - HTTP GET => READ
+  - HTTP PUT => UPDATE
+  - HTTP DELETE => DELETE
+ - Representation:
+  - How data is represented or returned to the client
+  - JSON and XML
+ - GET, POST, PUT, DELETE
+ - GET http://www.something.com/books
+ - GET http://www.something.com/books/4
+ - POST http://www.something.com/books/ {JSON Object => author, bookName}
+ - PUT http://www.something.com/books/5 {JSON Object => bookName}
+ - DELETE http://www.something.com/books/5
 
-In the project directory, you can run:
+- React App
+ - front-end -req/res- back-end (RESTful API)
 
-### `npm start`
+- REST != HTTP = Rest Api is api architect which follow Http cycle method
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. REST API Examples
+- docs.github.com/en/rest/overview/resource-in-the-rest-api
+ - $ curl https://api.github.com
+ - https://api.github.com/users/{user}
+ - jsonplaceholder.typicode.com/posts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Setting up your own REST API
+- db.json - make rest api resource to db.json
+- $ npm install json-server
+- $ json-server db.json or $ json-server db.json --watch -p 3001
 
-### `npm test`
+5. Using REST API from React App
+- https://github.com/devpranab/REST-API-JSON-Type-of-ReactJS/commits/main  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Error Handling, POST, PUT, DELETE
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. Handling Responses using State
